@@ -1,0 +1,89 @@
+{
+    "inspiration": [
+        {
+            "id": 1,
+            "title": "XCXMAIN 2018 F/W COLLECTION",
+            "description": "엑스씨엑스메인 18 f/w 출시를 하였습니다. 메인 디자이너인 Sean의 감각적인 그래픽과 패턴 작용으로 이번 시즌 라인을 출시하였습니다.",
+            "img": "../src/assets/images/thumbnails/inspiration__01.png"
+        },
+        {
+            "id": 2,
+            "title": "예술과 소통하는 패션 브랜드",
+            "description": "다채로운 컬러와 퀄리티 높은 자수 포인트로 엑스씨엑스만의 감각적인 그래픽을 점목시켜 겨울에 착용하기 편안하고 따뜻한 실용적인 웨어를 선보입니다."
+        },
+        {
+            "id": 3,
+            "title": "이제 스물다섯, 아트디렉터 조기석",
+            "description": "포토그래퍼, 무대 디자인, 그래픽 디자인, 인테리어 디자인까지... 수많은수식어가 붙는 아티스트 '조기석'"
+        }
+    ],
+    "artists": [
+        {
+            "id": 1,
+            "name": "홍은채",
+            "class": "Makeup Artist"
+        },
+        {
+            "id": 2,
+            "name": "XCXMAIN",
+            "class": "Model"
+        },
+        {
+            "id": 3,
+            "name": "XC MAIN",
+            "class": "Hair Artist"
+        },
+        {
+            "id": 4,
+            "name": "김시은",
+            "class": "Stylist"
+        },
+        {
+            "id": 5,
+            "name": "XCXMAIN",
+            "class": "Model"
+        }
+    ],
+    "category": [
+        {
+            "id": 1,
+            "title": "Sylist"
+        },
+        {
+            "id": 2,
+            "title": "Model"
+        },
+        {
+            "id": 3,
+            "title": "Photographer"
+        },
+        {
+            "id": 4,
+            "title": "Makeup Artist"
+        },
+        {
+            "id": 5,
+            "title": "Hair Artist"
+        },
+        {
+            "id": 6,
+            "title": "Location manager"
+        }
+    ],
+    "archive": [
+        {
+            "id": 1,
+            "class": "Look Book",
+            "title": "2022 Summer Project",
+            "want": 123,
+            "watch": 2290
+        },
+        {
+            "id": 2,
+            "class": "Look Book",
+            "title": "2022 Summer Project",
+            "want": 67,
+            "watch": 1278
+        }
+    ]
+}

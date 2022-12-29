@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/react-jabble/static/css/main.abe80758.css",
+    "main.js": "/react-jabble/static/js/main.9748dcf0.js",
+    "static/media/archive__02.png": "/react-jabble/static/media/archive__02.eb137971e6b0f2cb3091.png",
+    "static/media/inspiration__02.png": "/react-jabble/static/media/inspiration__02.34691e88782b5bc8fabb.png",
+    "static/media/banner__main.png": "/react-jabble/static/media/banner__main.ed011db58baa34fa0ce8.png",
+    "static/media/inspiration__01.png": "/react-jabble/static/media/inspiration__01.cbe3a88e5335fab95913.png",
+    "static/media/Montserrat-Medium.ttf": "/react-jabble/static/media/Montserrat-Medium.598141984583bec97122.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/react-jabble/static/media/Montserrat-SemiBold.27dfd575571f017cc9a7.ttf",
+    "static/media/Montserrat-Light.ttf": "/react-jabble/static/media/Montserrat-Light.73b7fd8d064d9bc6dcdd.ttf",
+    "static/media/Montserrat-Bold.ttf": "/react-jabble/static/media/Montserrat-Bold.68c8d686f4b0d91b92f1.ttf",
+    "static/media/Montserrat-Regular.ttf": "/react-jabble/static/media/Montserrat-Regular.7c8ccfe4b8a1b8ea2327.ttf",
+    "static/media/archive__01.png": "/react-jabble/static/media/archive__01.d4a4c133e41beb97e6d9.png",
+    "static/media/artists__03.png": "/react-jabble/static/media/artists__03.add0bd5e479fdba9c44f.png",
+    "static/media/inspiration__03.png": "/react-jabble/static/media/inspiration__03.28fac665010b4c8ad78c.png",
+    "static/media/category__04.png": "/react-jabble/static/media/category__04.d1440d3fa4b396ef705e.png",
+    "static/media/artists__01.png": "/react-jabble/static/media/artists__01.4b11bbaa25cb3d8aa462.png",
+    "static/media/category__06.png": "/react-jabble/static/media/category__06.540f284d3812c733fad1.png",
+    "static/media/artists__04.png": "/react-jabble/static/media/artists__04.2006bbc2863683d7b3e3.png",
+    "static/media/category__05.png": "/react-jabble/static/media/category__05.eb3716e20c37f5e86417.png",
+    "static/media/artists__05.png": "/react-jabble/static/media/artists__05.2ec7604332ac27a8fcaa.png",
+    "static/media/category__02.png": "/react-jabble/static/media/category__02.331b7c16e1b0c190a5cc.png",
+    "static/media/category__03.png": "/react-jabble/static/media/category__03.260218f15dfd36de672d.png",
+    "static/media/artists__02.png": "/react-jabble/static/media/artists__02.298fa3c8c8d7d6b1cb81.png",
+    "static/media/category__01.png": "/react-jabble/static/media/category__01.7f9f110f612acfdab213.png",
+    "index.html": "/react-jabble/index.html",
+    "main.abe80758.css.map": "/react-jabble/static/css/main.abe80758.css.map",
+    "main.9748dcf0.js.map": "/react-jabble/static/js/main.9748dcf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abe80758.css",
+    "static/js/main.9748dcf0.js"
+  ]
+}
