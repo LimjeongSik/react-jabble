@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-jabble/static/css/main.abe80758.css",
-    "main.js": "/react-jabble/static/js/main.269e6d9f.js",
+    "main.js": "/react-jabble/static/js/main.65507858.js",
     "static/media/archive__02.png": "/react-jabble/static/media/archive__02.eb137971e6b0f2cb3091.png",
     "static/media/inspiration__02.png": "/react-jabble/static/media/inspiration__02.34691e88782b5bc8fabb.png",
     "static/media/banner__main.png": "/react-jabble/static/media/banner__main.ed011db58baa34fa0ce8.png",
@@ -26,10 +26,10 @@
     "static/media/category__01.png": "/react-jabble/static/media/category__01.7f9f110f612acfdab213.png",
     "index.html": "/react-jabble/index.html",
     "main.abe80758.css.map": "/react-jabble/static/css/main.abe80758.css.map",
-    "main.269e6d9f.js.map": "/react-jabble/static/js/main.269e6d9f.js.map"
+    "main.65507858.js.map": "/react-jabble/static/js/main.65507858.js.map"
   },
   "entrypoints": [
     "static/css/main.abe80758.css",
-    "static/js/main.269e6d9f.js"
+    "static/js/main.65507858.js"
   ]
 }
