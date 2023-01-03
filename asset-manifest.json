@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/react-jabble/static/css/main.c66d6a28.css",
-    "main.js": "/react-jabble/static/js/main.b58f60f8.js",
+    "main.js": "/react-jabble/static/js/main.a70da1c4.js",
     "static/media/PretendardVariable.woff2": "/react-jabble/static/media/PretendardVariable.4097c3a83ad9ffa07942.woff2",
     "static/media/archive__02.png": "/react-jabble/static/media/archive__02.eb137971e6b0f2cb3091.png",
     "static/media/inspiration__02.png": "/react-jabble/static/media/inspiration__02.34691e88782b5bc8fabb.png",
     "static/media/banner__main.png": "/react-jabble/static/media/banner__main.ed011db58baa34fa0ce8.png",
     "static/media/inspiration__01.png": "/react-jabble/static/media/inspiration__01.cbe3a88e5335fab95913.png",
+    "static/media/banner__artists.png": "/react-jabble/static/media/banner__artists.125543e327ca3cf8c0cc.png",
     "static/media/Montserrat-Medium.ttf": "/react-jabble/static/media/Montserrat-Medium.598141984583bec97122.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/react-jabble/static/media/Montserrat-SemiBold.27dfd575571f017cc9a7.ttf",
     "static/media/Montserrat-Light.ttf": "/react-jabble/static/media/Montserrat-Light.73b7fd8d064d9bc6dcdd.ttf",
@@ -14,7 +15,11 @@
     "static/media/Montserrat-Regular.ttf": "/react-jabble/static/media/Montserrat-Regular.7c8ccfe4b8a1b8ea2327.ttf",
     "static/media/archive__01.png": "/react-jabble/static/media/archive__01.d4a4c133e41beb97e6d9.png",
     "static/media/artists__03.png": "/react-jabble/static/media/artists__03.add0bd5e479fdba9c44f.png",
+    "static/media/portfolio__01.png": "/react-jabble/static/media/portfolio__01.f8eff9fcf63683149e0c.png",
+    "static/media/portfolio__02.png": "/react-jabble/static/media/portfolio__02.af1b326ec57bd18709b8.png",
     "static/media/inspiration__03.png": "/react-jabble/static/media/inspiration__03.28fac665010b4c8ad78c.png",
+    "static/media/portfolio__04.png": "/react-jabble/static/media/portfolio__04.4f34af34ac282e4196cc.png",
+    "static/media/portfolio__03.png": "/react-jabble/static/media/portfolio__03.e5e921a6560218bb43ef.png",
     "static/media/category__04.png": "/react-jabble/static/media/category__04.d1440d3fa4b396ef705e.png",
     "static/media/artists__01.png": "/react-jabble/static/media/artists__01.4b11bbaa25cb3d8aa462.png",
     "static/media/category__06.png": "/react-jabble/static/media/category__06.540f284d3812c733fad1.png",
@@ -27,10 +32,10 @@
     "static/media/category__01.png": "/react-jabble/static/media/category__01.7f9f110f612acfdab213.png",
     "index.html": "/react-jabble/index.html",
     "main.c66d6a28.css.map": "/react-jabble/static/css/main.c66d6a28.css.map",
-    "main.b58f60f8.js.map": "/react-jabble/static/js/main.b58f60f8.js.map"
+    "main.a70da1c4.js.map": "/react-jabble/static/js/main.a70da1c4.js.map"
   },
   "entrypoints": [
     "static/css/main.c66d6a28.css",
-    "static/js/main.b58f60f8.js"
+    "static/js/main.a70da1c4.js"
   ]
 }
