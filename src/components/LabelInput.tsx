@@ -20,15 +20,11 @@ export default LabelInput;
 const Block = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 24px;
     gap: 9px;
     label {
         font-size: 16px;
         font-family: "Ms-SB";
         color: ${color.black04};
-    }
-
-    & + & {
-        margin-top: 24px;
     }
 `;

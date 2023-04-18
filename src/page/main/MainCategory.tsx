@@ -73,6 +73,9 @@ const CategoryBox = styled.div`
     padding: 0 20px;
     margin: 0 auto;
     box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+        padding-right: 0;
+    }
 `;
 const CategorySwiperBox = styled.div`
     position: relative;

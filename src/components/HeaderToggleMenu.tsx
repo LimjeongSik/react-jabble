@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { color } from "../assets/colors";
+import { useAppSelector } from "../hook";
 import IsearchW from "../assets/images/icons/ic__search_w.png";
 import HeaderMenuList from "./HeaderMenuList";
 
 const HeaderToggleMenu = () => {
+    const loginCheck = useAppSelector((state) => state.userAuth.sessionId);
+    const username = useAppSelector((state) => state.userAuth.username);
     const [on, setOn] = useState(false);
 
     const onToggleButtons: React.MouseEventHandler<HTMLDivElement> = () => {
@@ -14,6 +17,20 @@ const HeaderToggleMenu = () => {
     const ButtonDisabled: React.MouseEventHandler<HTMLAnchorElement> = () => {
         setOn(false);
     };
+
+    const toggleMenuClose = useCallback(() => {
+        if (window.innerWidth >= 975) {
+            return setOn(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("resize", toggleMenuClose);
+
+        return () => {
+            window.removeEventListener("resize", toggleMenuClose);
+        };
+    }, [toggleMenuClose]);
     return (
         <>
             <MenuButton onClick={onToggleButtons} toggle={on}>
@@ -24,12 +41,30 @@ const HeaderToggleMenu = () => {
             <ToggleMenu toggle={on}>
                 <div>
                     <div>
-                        <Link to="/login" onClick={ButtonDisabled}>
-                            Login
-                        </Link>
+                        {loginCheck ? (
+                            <ProfileBox>
+                                <Profile>
+                                    <Link to="/mypage" onClick={ButtonDisabled}>
+                                        <ProfileImage />
+                                        <h6>{username}</h6>
+                                    </Link>
+                                </Profile>
+                                <Link to="/mypage" onClick={ButtonDisabled}>
+                                    mypage
+                                </Link>
+                            </ProfileBox>
+                        ) : (
+                            <Link to="/login" onClick={ButtonDisabled}>
+                                Login
+                            </Link>
+                        )}
                     </div>
                     <input type="text" placeholder="Search" />
-                    <HeaderMenuList ButtonDisabled={ButtonDisabled} />
+                    <HeaderMenuList
+                        ButtonDisabled={ButtonDisabled}
+                        tog="none"
+                        drop={true}
+                    />
                 </div>
             </ToggleMenu>
         </>
@@ -162,7 +197,9 @@ const ToggleMenu = styled.div<{ toggle: boolean }>`
         ul {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
             margin-top: 20px;
+            height: auto;
             li {
                 height: inherit;
                 a {
@@ -174,6 +211,9 @@ const ToggleMenu = styled.div<{ toggle: boolean }>`
                     font-family: "Ms-M";
                     padding: 5px 0;
                     margin: 5px 0;
+                    &::before {
+                        display: none;
+                    }
                 }
             }
         }
@@ -185,7 +225,31 @@ const ToggleMenu = styled.div<{ toggle: boolean }>`
             opacity: 1;
             visibility: visible;
         `}
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
         top: 60px;
     }
+`;
+const ProfileBox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+const Profile = styled.div`
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-items: center;
+        gap: 5px;
+        h6 {
+            font-size: 12px;
+        }
+    }
+`;
+const ProfileImage = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: ${color.gray01};
 `;

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { color } from "../assets/colors";
-
+import { Link } from "react-router-dom";
 const HeaderPopup = () => {
     return (
         <Block>
-            <h6>
+            <Link to="/register">
                 Jabble 신규 회원가입 하고 <span>혜택</span> 받자!
-            </h6>
+            </Link>
         </Block>
     );
 };
@@ -21,7 +21,7 @@ const Block = styled.div`
     padding: 12px 0;
     height: 40px;
     box-sizing: border-box;
-    h6 {
+    a {
         font-size: 13px;
         letter-spacing: -0.03px;
         font-family: "Ms-SB";

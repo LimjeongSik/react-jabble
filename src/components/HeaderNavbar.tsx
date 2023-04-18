@@ -6,8 +6,11 @@ import Logo from "../assets/images/logo/logo.png";
 import IsearchW from "../assets/images/icons/ic__search_w.png";
 import HeaderToggleMenu from "./HeaderToggleMenu";
 import HeaderMenuList from "./HeaderMenuList";
+import { useAppSelector } from "../hook";
 
 const HeaderNavbar = () => {
+    const authCheck = useAppSelector((state) => state.userAuth.sessionId);
+    const username = useAppSelector((state) => state.userAuth.username);
     return (
         <>
             <Block>
@@ -21,10 +24,22 @@ const HeaderNavbar = () => {
                         </div>
                         <HeaderMenuList />
                     </HeaderNavL>
-                    <HeaderNavR>
-                        <input type="text" placeholder="Search" />
-                        <Link to="/login">Login</Link>
-                    </HeaderNavR>
+                    {authCheck ? (
+                        <HeaderNavR>
+                            <input type="text" placeholder="Search" />
+                            <Profile>
+                                <Link to="/mypage">
+                                    <ProfileImage />
+                                    <h6>{username}</h6>
+                                </Link>
+                            </Profile>
+                        </HeaderNavR>
+                    ) : (
+                        <HeaderNavR>
+                            <input type="text" placeholder="Search" />
+                            <Link to="/login">Login</Link>
+                        </HeaderNavR>
+                    )}
                     <HeaderToggleMenu />
                 </HeaderNavbarBox>
             </Block>
@@ -81,29 +96,10 @@ const HeaderNavL = styled.div`
             }
         }
     }
-    ul {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        li {
-            height: inherit;
-            a {
-                display: flex;
-                align-items: center;
-                height: inherit;
-                font-size: 18px;
-                color: ${color.black03};
-                font-family: "Ms-M";
-                padding: 0 17px;
-                margin: 0 17px;
-            }
-        }
-        @media screen and (max-width: 975px) {
-            display: none;
-        }
-    }
 `;
 const HeaderNavR = styled.div`
+    display: flex;
+    align-items: center;
     height: 100%;
     input {
         width: 280px;
@@ -141,4 +137,24 @@ const PaddingBlock = styled.div`
     @media screen and (max-width: 768px) {
         padding-bottom: 100px;
     }
+`;
+const Profile = styled.div`
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-items: center;
+        padding: 0 20px 0 30px;
+        gap: 5px;
+        h6 {
+            font-size: 12px;
+        }
+    }
+`;
+const ProfileImage = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: ${color.gray01};
 `;

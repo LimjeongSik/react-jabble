@@ -1,41 +1,35 @@
-import { useState, useCallback } from "react";
 import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import { color } from "../assets/colors";
-import { ArtistsTabMenu } from "../hooks/useArtist";
 import SwiperSlides from "./SwiperSlides";
-import { useAppDispatch } from "../hook";
-import { onFilterTab } from "../slices/artist";
 
-const options = {
-    slidesPerView: "auto",
-    pagination: {
-        clickable: true,
-    },
-    observer: true,
-    observeParents: true,
-};
+interface Props {
+    options: {};
+    data: {
+        id: number;
+        name: string;
+        title: string;
+    }[];
+    isActiveNumber: number;
+    dispatchFunction: (id: number, name: string) => void;
+}
 
-const SwiperTabMenu = () => {
-    const [active, setActive] = useState<number>(1);
-    const onClickActive = useCallback(
-        (e: React.MouseEvent<HTMLElement, MouseEvent>, id: number) => {
-            setActive(id);
-        },
-        [],
-    );
-    const dispatch = useAppDispatch();
+const SwiperTabMenu = ({
+    options,
+    data,
+    isActiveNumber,
+    dispatchFunction,
+}: Props) => {
     return (
         <Block>
             <SwiperSlides options={options}>
-                {ArtistsTabMenu.map((item, idx) => (
+                {data.map((item, idx) => (
                     <SwiperSlide
                         key={item.id}
                         onClick={(e) => {
-                            onClickActive(e, item.id);
-                            dispatch(onFilterTab(item.name));
+                            dispatchFunction(item.id, item.name);
                         }}
-                        className={active === idx + 1 ? "active" : ""}
+                        className={isActiveNumber === idx + 1 ? "active" : ""}
                     >
                         <span>{item.title}</span>
                     </SwiperSlide>
@@ -58,7 +52,7 @@ const Block = styled.div`
         span {
             font-size: 14px;
             color: ${color.black01};
-            font-family: "Ms-R";
+            font-family: "Pretendard";
         }
     }
     .swiper-slide:not(:last-child) {

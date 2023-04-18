@@ -156,6 +156,7 @@ const FooterRBox = styled.div`
         color: ${color.white01};
         font-family: "Ms-SB";
         @media screen and (max-width: 499px) {
+            width: 100%;
             font-size: 13px;
         }
     }

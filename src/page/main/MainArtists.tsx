@@ -54,7 +54,7 @@ const MainArtists = () => {
                             <SwiperSlide key={item.id}>
                                 <img src={item.img} alt={item.name} />
                                 <h6>{item.name}</h6>
-                                <span>{item.class}</span>
+                                <span>{item.clasis}</span>
                             </SwiperSlide>
                         ))}
                     </SwiperSlides>
@@ -86,6 +86,7 @@ const BlockContent = styled.div`
         margin-bottom: 14px;
     }
     @media screen and (max-width: 768px) {
+        padding: 0;
         h2 {
             margin-bottom: 8px;
         }

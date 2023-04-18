@@ -1,11 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = () => {
-    return (
-        <>
-            <GlobalStyles />
-        </>
-    );
+    return <GlobalStyles />;
 };
 
 export default GlobalStyle;
@@ -121,6 +117,7 @@ input[type="search"]::-webkit-search-results-decoration,
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
+    
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -141,7 +138,17 @@ textarea {
 textarea {
     resize: none;
 }
-
+input, select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background:#fff;
+    -webkit-background:#fff;
+    -moz-background:#fff;
+}
 /* Style */
 body.hidden {
     position: fixed;

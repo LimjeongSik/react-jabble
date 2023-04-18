@@ -1,53 +1,64 @@
 import styled from "styled-components";
+import BasicLayout from "../../components/layout/BasicLayout";
+import ArtistsTemplate from "./ArtistsTemplate";
+
+import ArtistsBanner from "../../assets/images/banners/banner__artists.png";
 import { color } from "../../assets/colors";
-import MainTitle from "../../components/MainTitle";
-import SwiperTabMenu from "../../components/SwiperTabMenu";
-import ArtistsOption from "./ArtistsOption";
-import ArtistView from "./ArtistView";
 
 const Artists = () => {
     return (
-        <Block>
-            <div className="border__line">
-                <MainTitle
-                    title="Artists"
-                    subtitle="다채로운 컬러와 편안하고 따뜻한 실용적인 웨어를 선보입니다."
-                />
-            </div>
-            <SwiperTabMenu />
-            <ArtistsOption />
-            <ArtistView />
-        </Block>
+        <>
+            <ArtistsBannerStyled>
+                <ArtistsBannerContent>
+                    <h2>예술과 소통하는 패션 브랜드</h2>
+                    <span>
+                        다채로운 컬러와 퀄리티 높은 자수 포인트로 엑스씨엑스만의
+                        감각적인 그래픽
+                    </span>
+                </ArtistsBannerContent>
+            </ArtistsBannerStyled>
+            <BasicLayout
+                title="Artists"
+                subTitle="다채로운 컬러와 편안하고 따뜻한 실용적인 웨어를 선보입니다."
+                children={<ArtistsTemplate />}
+            />
+        </>
     );
 };
 
 export default Artists;
 
-const Block = styled.div`
+const ArtistsBannerStyled = styled.div`
+    position: relative;
     width: 100%;
+    height: 220px;
+    background-image: url(${ArtistsBanner});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+`;
+const ArtistsBannerContent = styled.div`
+    width: 100%;
+    height: 100%;
     max-width: 1400px;
-    min-height: 100%;
-    margin: 70px auto;
+    margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    & > .border__line {
-        border-bottom: 1px solid ${color.gray03};
-        padding-bottom: 45px;
-        h2 {
-            margin-bottom: 24px;
-            font-family: "Ms-R";
-        }
-        span {
-            color: ${color.black04};
-        }
-        @media screen and (max-width: 768px) {
-            padding-bottom: 25px;
-            h2 {
-                margin-bottom: 12px;
-            }
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        font-size: 28px;
+        color: ${color.white01};
+        font-family: "Pretendard";
+        font-weight: bold;
+        margin-bottom: 18px;
     }
-    @media screen and (max-width: 960px) {
-        margin: 20px auto;
+    span {
+        font-size: 14px;
+        letter-spacing: -0.04px;
+        color: ${color.white01};
+        font-family: "Pretendard";
+        font-weight: 200;
     }
 `;

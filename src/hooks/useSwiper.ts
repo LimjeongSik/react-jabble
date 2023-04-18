@@ -1,9 +1,9 @@
 import { useRef, useCallback } from "react";
 import SwiperCore from "swiper";
 
-type Test = [(Swiper: SwiperCore) => void, () => void, () => void];
+type swiperType = [(Swiper: SwiperCore) => void, () => void, () => void];
 
-export const useSwiper = (): Test => {
+export const useSwiper = (): swiperType => {
     const swiperRef = useRef<SwiperCore>();
 
     const onInit = (Swiper: SwiperCore) => {

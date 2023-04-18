@@ -1,11 +1,14 @@
 export const color = {
     white01: "#ffffff",
     white02: "#fbfbfb",
+    white03: "#e5e5e5",
 
     black01: "#5d5d5d",
     black02: "#292929",
     black03: "#000000",
     black04: "#252525",
+    black05: "#333333",
+    black06: "#171717",
 
     orange: "#ff4b00",
 
@@ -21,4 +24,5 @@ export const color = {
     gray10: "#aaaaaa",
     gray11: "#949494",
     gray12: "#b2b2b2",
+    gray13: "#606063",
 };

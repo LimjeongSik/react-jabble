@@ -1,41 +1,36 @@
-import { Link } from "react-router-dom";
+import { useMenuList } from "../hooks/useMenuList";
+import styled from "styled-components";
+import MenuList from "./MenuList";
 
-interface Props {
+export interface ButtonDisabledProps {
     ButtonDisabled?: React.MouseEventHandler<HTMLAnchorElement>;
+    tog?: string;
+    drop?: boolean;
 }
 
-const MenuListArray = [
-    {
-        id: 1,
-        to: "/artists",
-        link: "Artists",
-    },
-    {
-        id: 2,
-        to: "/archive",
-        link: "Archive",
-    },
-    {
-        id: 3,
-        to: "/inspiration",
-        link: "Inspiration",
-    },
-];
-
-const HeaderMenuList = ({ ButtonDisabled }: Props) => {
+const HeaderMenuList = ({ ButtonDisabled, tog, drop }: ButtonDisabledProps) => {
     return (
-        <>
-            <ul>
-                {MenuListArray.map((item) => (
-                    <li key={item.id}>
-                        <Link to={item.to} onClick={ButtonDisabled}>
-                            {item.link}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </>
+        <UlStyled>
+            {useMenuList.map((item) => (
+                <MenuList
+                    key={item.id}
+                    item={item}
+                    ButtonDisabled={ButtonDisabled}
+                    tog={tog}
+                    drop={drop}
+                />
+            ))}
+        </UlStyled>
     );
 };
 
 export default HeaderMenuList;
+
+const UlStyled = styled.ul`
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @media screen and (max-width: 975px) {
+        display: none;
+    }
+`;

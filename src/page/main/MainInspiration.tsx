@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { color } from "../../assets/colors";
 import { useInspiration } from "../../hooks/useInspiration";
 import MainTitle from "../../components/MainTitle";
+import InspirationViewBox from "../inspiration/InspirationViewBox";
 
 const MainInspiration = () => {
     return (
@@ -15,11 +15,11 @@ const MainInspiration = () => {
                 />
                 <ContentsBox>
                     {useInspiration.map((item) => (
-                        <ContentBox key={item.id}>
-                            <img src={item.img} alt={item.title} />
-                            <h6>{item.title}</h6>
-                            <span className="ellipsis">{item.description}</span>
-                        </ContentBox>
+                        <InspirationViewBox
+                            item={item}
+                            key={item.id}
+                            to={`/inspiration/${item.id}`}
+                        />
                     ))}
                 </ContentsBox>
             </div>
@@ -41,45 +41,13 @@ const Block = styled.div`
 `;
 const ContentsBox = styled.div`
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
-    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px 20px;
+    margin: 42px 0 121px;
     @media screen and (max-width: 768px) {
-        margin-top: 30px;
-        flex-direction: column;
-    }
-`;
-const ContentBox = styled.div`
-    flex: 1;
-    img {
-        width: 100%;
-        margin-bottom: 18px;
-    }
-    h6 {
-        font-size: 18px;
-        color: ${color.black02};
-        font-family: "Ms-M";
-        margin-bottom: 9px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-    }
-    span {
-        font-size: 15px;
-        line-height: 24px;
-        letter-spacing: -0.34px;
-        color: ${color.gray05};
-        font-family: "Ms-L";
-    }
-    @media screen and (max-width: 499px) {
-        h6 {
-            font-size: 16px;
-        }
-        span {
-            font-size: 13px;
-            line-height: 18px;
-        }
+        margin-top: 21px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 40px;
     }
 `;

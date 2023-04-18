@@ -85,6 +85,9 @@ const Block = styled.div`
     margin: 0 auto;
     padding: 0 20px 140px;
     box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+        padding-right: 0;
+    }
     @media screen and (max-width: 499px) {
         padding-bottom: 70px;
     }
